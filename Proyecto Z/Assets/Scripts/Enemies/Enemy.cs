@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     //public GameObject enemy;     
     private void OnMouseDown()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
 
         /*if()
         {
