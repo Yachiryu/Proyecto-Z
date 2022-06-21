@@ -11,29 +11,30 @@ public class Movement : MonoBehaviour
     [SerializeField] private float min_distance;
 
     // 
-    private int nextStep = 0;
+    private int numeroAleatorio;
 
     private void Start()
     {
-        nextStep = Random.Range(0, movementpoints.Length);
+        numeroAleatorio = Random.Range(0, movementpoints.Length);
     }
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, movementpoints[nextStep].position, speedmovement * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, movementpoints[numeroAleatorio].position, speedmovement * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, movementpoints[nextStep].position) < min_distance)
+        if (Vector2.Distance(transform.position, movementpoints[numeroAleatorio].position) < min_distance)
         {
-            //nextStep = Random.Range(0, movementpoints.Length);
-            nextStep += 1;
-            if(nextStep >= movementpoints.Length)
+            numeroAleatorio = Random.Range(0, movementpoints.Length);
+            /*numeroAleatorio += 1;
+            if(numeroAleatorio >= movementpoints.Length)
             {
-                nextStep = 0;
-            }
+                numeroAleatorio = 0;
+            }*/
         }
     }
 
     // velocidad de la valkirye 4 min distance 1.5
-    // velocidad del ninja 5 min distance 2
-    // velocidad del caballero 5 min distance 2
+    // velocidad del ninja 5 min distance 3
+    // velocidad del caballero 3 min distance 1
+    // velocidad del necromancer 4.5 min distance 2
 }
