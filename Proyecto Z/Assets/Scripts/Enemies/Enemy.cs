@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    //public GameObject enemy;     
+    public int Score = 0;
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        Score_UI.score += Score;
     }
+
 
 }

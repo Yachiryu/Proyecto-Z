@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48fe8cd4aee3d7845b697efb1495f980
+guid: 3708cc1d696efbd448ffb825039b97c0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Thirteen Pixel Fonts
+  - PC Senior
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
