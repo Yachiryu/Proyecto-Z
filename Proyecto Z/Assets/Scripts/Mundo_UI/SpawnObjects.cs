@@ -5,12 +5,12 @@ using UnityEngine;
 public class SpawnObjects : MonoBehaviour
 {
     // Array creado para mantener a los enemigos en un solo sitio
-    public GameObject[] enemies;
+    public GameObject[] objects;
     
     // Definimos desde cuando queremos que empiecen a respawnear los enemigos
     public float tiempodelRespawn = 1;
     
-    // Cuantos segundos queremos repetir el spawn
+    // Cuanto queremos repetir el spawn
     public float repeticiondelRespawn = 3;
      
 
@@ -24,12 +24,10 @@ public class SpawnObjects : MonoBehaviour
     void Start()
     {
         //Metodo para hacer que el metodo funcione en el tiempo indicado y repetirlo
-        InvokeRepeating("SpawnEnemies", tiempodelRespawn, repeticiondelRespawn);
-
-
+        InvokeRepeating("Spawn", tiempodelRespawn, repeticiondelRespawn);
     }
 
-    public void SpawnEnemies()
+    public void Spawn()
     {
         // Crea el valor random de la derecha y la izquierda. Ademas de dar un valor maximmo y minimo
         Vector3 spawnPosition = new Vector3(0, 0, 0);
@@ -37,6 +35,6 @@ public class SpawnObjects : MonoBehaviour
         Random.Range(yspawn_Down.position.y, yspawn_Up.position.y), 0);
 
         // Accedemos al array creado anteriormente para los enemigos
-        GameObject enemie = Instantiate(enemies[Random.Range(0,enemies.Length)],spawnPosition, gameObject.transform.rotation);
+        GameObject enemie = Instantiate(objects[Random.Range(0,objects.Length)],spawnPosition, gameObject.transform.rotation);
     }
 }

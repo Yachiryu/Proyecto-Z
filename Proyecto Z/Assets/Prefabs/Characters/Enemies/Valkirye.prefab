@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5791978131823384127}
   - component: {fileID: 3738107558867775737}
   - component: {fileID: 4346489519695004600}
-  - component: {fileID: 5742318938394657118}
+  - component: {fileID: 8919910268041289258}
   - component: {fileID: 4953571192220243884}
   m_Layer: 0
   m_Name: Valkirye
@@ -128,8 +128,8 @@ MonoBehaviour:
   - {fileID: 324519346224564786, guid: 02bc749df7d7ca042b93f6cc45e6658c, type: 3}
   - {fileID: 1471675682097802175, guid: 7ba1d96311a976d45970cf8efe800203, type: 3}
   - {fileID: 2046309715560583018, guid: dcc9f00fc7963874d87dbb9f4f772e74, type: 3}
-  min_distance: 1.5
---- !u!114 &5742318938394657118
+  min_distance: 1
+--- !u!114 &8919910268041289258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,10 +138,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6049179205627027264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d0b36ac9253a204aa45c15aab673490, type: 3}
+  m_Script: {fileID: 11500000, guid: 6813044e202f8a7489a7e08be760e7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: 30
+  Score: 20
 --- !u!70 &4953571192220243884
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

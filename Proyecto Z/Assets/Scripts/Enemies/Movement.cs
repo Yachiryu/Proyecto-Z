@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {   
-    /*Nombramos los nombres de las variables y hacemos que solo
+    /*Nombramos los nombres de las variables para controlar la velocidad y hacemos que solo
     sean editables desde el inspector de unity*/
     [SerializeField] private float speedmovement;
     [SerializeField] private Transform[] movementpoints;
     [SerializeField] private float min_distance;
 
-    // 
+    // Creamos la variable para que se pueda mover de modo random
     private int numeroAleatorio;
 
     private void Start()
@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
         numeroAleatorio = Random.Range(0, movementpoints.Length);
     }
 
+    // Hacemos que se mueva aleatoriamente por los puntos que creemos
     private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, movementpoints[numeroAleatorio].position, speedmovement * Time.deltaTime);
@@ -25,16 +26,13 @@ public class Movement : MonoBehaviour
         if (Vector2.Distance(transform.position, movementpoints[numeroAleatorio].position) < min_distance)
         {
             numeroAleatorio = Random.Range(0, movementpoints.Length);
-            /*numeroAleatorio += 1;
-            if(numeroAleatorio >= movementpoints.Length)
-            {
-                numeroAleatorio = 0;
-            }*/
         }
     }
 
-    // velocidad de la valkirye 4 min distance 1.5
-    // velocidad del ninja 5 min distance 3
-    // velocidad del caballero 3 min distance 1
-    // velocidad del necromancer 4.5 min distance 2
+    /* Hacemos que el movimiento sea en orden y no aleatorio
+     numeroAleatorio += 1;
+     if(numeroAleatorio >= movementpoints.Length)
+     {
+       numeroAleatorio = 0;
+     }*/
 }
