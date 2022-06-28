@@ -119,15 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedmovement: 3.5
   movementpoints:
-  - {fileID: 5912945721776166569, guid: decc1b93f718b9647b3f714d087d44dd, type: 3}
-  - {fileID: 3673406116286629361, guid: 4c28ccc4f88ccb74ca42f7d5d0372e26, type: 3}
-  - {fileID: 4521936279175579420, guid: e88d7d6b37b046f469317af08a212215, type: 3}
-  - {fileID: 8223241164676255424, guid: 015c2e623c1648541971b9a7bd8f32c2, type: 3}
-  - {fileID: 2582494481409470216, guid: cf4abacb3481c1341808264e2070fa11, type: 3}
-  - {fileID: 1957543717705840753, guid: 0bf2d714c0f3af34f9c1e3d28a47a865, type: 3}
-  - {fileID: 324519346224564786, guid: 02bc749df7d7ca042b93f6cc45e6658c, type: 3}
-  - {fileID: 1471675682097802175, guid: 7ba1d96311a976d45970cf8efe800203, type: 3}
-  - {fileID: 2046309715560583018, guid: dcc9f00fc7963874d87dbb9f4f772e74, type: 3}
+  - {fileID: 1354000110208917374, guid: 0b70c1f3d09defe408656817e5eac617, type: 3}
+  - {fileID: 2254144207182550080, guid: 0fe35d9998bcba64cb7e6bed3088db3c, type: 3}
+  - {fileID: 5759512712470546713, guid: 88ed302145afedc4c82dae2739417232, type: 3}
+  - {fileID: 697122342011236581, guid: decd77e41116478439f5febfe4da3411, type: 3}
+  - {fileID: 1892178211946408489, guid: 861ae16ecf931ed49928012d19f4778f, type: 3}
   min_distance: 1
 --- !u!114 &8919910268041289258
 MonoBehaviour:
@@ -155,6 +151,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0052094827, y: -0.0063623777}
-  m_Size: {x: 0.44179752, y: 0.6875117}
+  m_Offset: {x: 0.014698228, y: 0.024476402}
+  m_Size: {x: 0.5082194, y: 0.6258347}
   m_Direction: 0

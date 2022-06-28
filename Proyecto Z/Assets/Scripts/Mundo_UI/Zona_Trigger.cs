@@ -14,6 +14,12 @@ public class Zona_Trigger : MonoBehaviour
             Score_UI.score -= 50;
         }
 
+        if (collision.tag == "Enemy2")
+        {
+            Destroy(collision.gameObject);
+            Score_UI.score -= 100;
+        }
+
         if (collision.tag == "Ally")
         {
             Destroy(collision.gameObject);

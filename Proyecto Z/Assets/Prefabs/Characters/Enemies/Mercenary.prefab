@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4427719732837043046}
   m_Layer: 0
   m_Name: Mercenary
-  m_TagString: Enemy
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,15 +119,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedmovement: 5
   movementpoints:
-  - {fileID: 5912945721776166569, guid: decc1b93f718b9647b3f714d087d44dd, type: 3}
-  - {fileID: 3673406116286629361, guid: 4c28ccc4f88ccb74ca42f7d5d0372e26, type: 3}
-  - {fileID: 4521936279175579420, guid: e88d7d6b37b046f469317af08a212215, type: 3}
-  - {fileID: 8223241164676255424, guid: 015c2e623c1648541971b9a7bd8f32c2, type: 3}
-  - {fileID: 2582494481409470216, guid: cf4abacb3481c1341808264e2070fa11, type: 3}
-  - {fileID: 1957543717705840753, guid: 0bf2d714c0f3af34f9c1e3d28a47a865, type: 3}
-  - {fileID: 324519346224564786, guid: 02bc749df7d7ca042b93f6cc45e6658c, type: 3}
-  - {fileID: 1471675682097802175, guid: 7ba1d96311a976d45970cf8efe800203, type: 3}
-  - {fileID: 2046309715560583018, guid: dcc9f00fc7963874d87dbb9f4f772e74, type: 3}
+  - {fileID: 5319115641885279956, guid: 1b166c2da3a529842b9c9840d9a1d5d2, type: 3}
+  - {fileID: 6239337549418072461, guid: 58a8cb35e1a18b748b942a0cfde57ae7, type: 3}
+  - {fileID: 883230007225445872, guid: 780e60145feabcc44a570d36fdc71d90, type: 3}
   min_distance: 2
 --- !u!114 &6263686128619757310
 MonoBehaviour:
@@ -141,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6813044e202f8a7489a7e08be760e7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: 50
+  Score: 45
 --- !u!70 &4427719732837043046
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
