@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: -6682758644800711040
     second: UI_Menu_4
+  - first:
+      213: -9047192602271000716
+    second: Tittle_Game
+  - first:
+      213: -1401059318110207546
+    second: UI_Menu_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -195,7 +201,7 @@ TextureImporter:
         width: 32
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,6 +209,48 @@ TextureImporter:
       bones: []
       spriteID: 0869bf85b621243a0800000000000000
       internalID: -6682758644800711040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tittle_Game
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 162
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4775817234ae17280800000000000000
+      internalID: -9047192602271000716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Menu_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 239
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c14aca29ff6e8ce0800000000000000
+      internalID: -1401059318110207546
       vertices: []
       indices: 
       edges: []

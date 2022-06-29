@@ -6,7 +6,8 @@ public class Puntaje_Deteccion : MonoBehaviour
 {
     // Determinamos cuantos puntos queremos cuando destruyamos al enemigo o al humano
     public int Score = 0;
-    
+    public int point_Heal;
+
     /* Hace que unity detecte donde esta dando "Click" el mouse y
        Dar la puntuacion correspondiente del enemigo */
     private void OnMouseDown()

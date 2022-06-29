@@ -48,9 +48,8 @@ public class Pause_Menu : MonoBehaviour
         Score_UI.score = 0;
     }
 
-    public void Quit_game()
+    public void Main_Menu()
     {
-        Debug.Log("cerrando juego");
-        Application.Quit();
+        SceneManager.LoadScene("Menu_Inicio");
     }
 }
