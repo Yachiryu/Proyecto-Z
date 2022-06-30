@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 15
+  num_Clicks: 0
+  animacion: {fileID: 5672090726997533984}
 --- !u!114 &-2748167879978744147
 MonoBehaviour:
   m_ObjectHideFlags: 0

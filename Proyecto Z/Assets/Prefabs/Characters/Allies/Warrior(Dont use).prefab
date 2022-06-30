@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1206301026496235864}
   - component: {fileID: 1206301026496235865}
   m_Layer: 0
-  m_Name: Warrior
+  m_Name: Warrior(Dont use)
   m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

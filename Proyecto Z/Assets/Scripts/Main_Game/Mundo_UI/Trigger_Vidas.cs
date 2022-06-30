@@ -47,6 +47,12 @@ public class Trigger_Vidas : MonoBehaviour
             Destroy(collision.gameObject);
             Score_UI.score += 25;
         }
+
+        if (collision.tag == "Ally2")
+        {
+            Destroy(collision.gameObject);
+            Score_UI.score += 25;
+        }
     }
 
 }

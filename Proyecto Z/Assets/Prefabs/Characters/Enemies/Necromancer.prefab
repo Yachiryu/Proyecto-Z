@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 35
+  num_Clicks: 1
+  animacion: {fileID: 7713141894194489566}
 --- !u!70 &8758625569994769158
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

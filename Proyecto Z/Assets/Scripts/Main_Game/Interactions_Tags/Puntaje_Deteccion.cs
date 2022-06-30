@@ -5,8 +5,10 @@ using UnityEngine;
 public class Puntaje_Deteccion : MonoBehaviour
 {
     // Determinamos cuantos puntos queremos cuando destruyamos al enemigo o al humano
+    // Y la vida que tendra al morir, y laanimacion a ejecutar
     public int Score = 0;
-    public int point_Heal;
+    public int num_Clicks;
+    public Animator animacion;
 
     /* Hace que unity detecte donde esta dando "Click" el mouse y
        Dar la puntuacion correspondiente del enemigo */
@@ -14,22 +16,44 @@ public class Puntaje_Deteccion : MonoBehaviour
     {
         if (tag == "Enemy")
         {
-            Destroy(gameObject);
-            Score_UI.score += Score;
+            num_Clicks --;
+            if (num_Clicks <= 0)
+            {
+                GetComponent<Movement>().enabled = false;
+                animacion.SetBool("Muerte_Anim",true);
+                Destroy(gameObject,2f);
+                Score_UI.score += Score;
+            }
         }
 
         if (tag == "Enemy2")
         {
-            Destroy(gameObject);
-            Score_UI.score += Score;
+            num_Clicks--;
+            if (num_Clicks <= 0)
+            {
+                GetComponent<Movement>().enabled = false;
+                animacion.SetBool("Muerte_Anim", true);
+                Destroy(gameObject,2f);
+                Score_UI.score += Score;
+            }
         }
 
         if (tag == "Ally")
         {
-            Destroy(gameObject);
+            GetComponent<Movement>().enabled = false;
+            animacion.SetBool("Muerte_Anim", true);
+            Destroy(gameObject,2f);
             Score_UI.score -= Score;
         }
-       
+
+        if (tag == "Ally2")
+        {
+            GetComponent<Movement>().enabled = false;
+            animacion.SetBool("Muerte_Anim", true);
+            Destroy(gameObject, 2f);
+            Score_UI.score -= Score;
+        }
+
     }
 
 
