@@ -973,7 +973,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae72818977f5150419a1282560702c05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 914c9911a97193949919fe29cd145c6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1498,7 +1498,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1452651521
 RectTransform:
@@ -1881,7 +1881,6 @@ MonoBehaviour:
   - {fileID: 7713141894194489567, guid: d42ed8861eec7e949ac040446d7af215, type: 3}
   - {fileID: 4538853979117402243, guid: 843df3ce891d1db478a520dc3cbcc083, type: 3}
   - {fileID: 5672090726997533985, guid: a0cb241d13fc9f046a17123471669a69, type: 3}
-  - {fileID: 4707004477535312469, guid: 113a85d761baf0943852071b06f41770, type: 3}
   tiempodelRespawn: 1
   repeticiondelRespawn: 3
   xspawn_Der: {fileID: 918766662}

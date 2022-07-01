@@ -46,13 +46,6 @@ public class Puntaje_Deteccion : MonoBehaviour
             Score_UI.score -= Score;
         }
 
-        if (tag == "Ally2")
-        {
-            GetComponent<Movement>().enabled = false;
-            animacion.SetBool("Muerte_Anim", true);
-            Destroy(gameObject, 2f);
-            Score_UI.score -= Score;
-        }
 
     }
 

@@ -15,4 +15,14 @@ public class Menu_Buttons : MonoBehaviour
         Debug.Log("Saliendo.....");
         Application.Quit();
     }
+
+    public void ComoJugar()
+    {
+        SceneManager.LoadScene("Menu_Instrucciones");
+    }
+
+    public void Volver_Menu()
+    {
+        SceneManager.LoadScene("Menu_Inicio");
+    }
 }

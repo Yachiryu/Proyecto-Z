@@ -14,11 +14,6 @@ public class Movement : MonoBehaviour
     //private int numeroAleatorio;
     private int siguiente_paso;
 
-    private void Start()
-    {
-        //numeroAleatorio = Random.Range(0, movementpoints.Length);
-    }
-
     private void Update()
     {
         // Hacemos que el movimiento sea en orden y no aleatorio

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1206301026496235864}
   - component: {fileID: 1206301026496235865}
   m_Layer: 0
-  m_Name: Warrior(Dont use)
-  m_TagString: Ally
+  m_Name: Warrior
+  m_TagString: Ally2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 100
+  num_Clicks: 0
+  animacion: {fileID: 1206301026496235870}
 --- !u!70 &1206301026496235865
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

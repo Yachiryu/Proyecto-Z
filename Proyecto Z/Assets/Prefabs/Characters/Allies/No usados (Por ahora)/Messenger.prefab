@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4707004477535312474}
   - component: {fileID: 4707004477535312475}
   - component: {fileID: 4707004477535312468}
-  - component: {fileID: 4707004477535312472}
   - component: {fileID: 4707004477535312479}
   - component: {fileID: 4707004477535312473}
+  - component: {fileID: 7904487774366784348}
   m_Layer: 0
   m_Name: Messenger
   m_TagString: Ally
@@ -105,21 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4707004477535312472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4707004477535312469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6813044e202f8a7489a7e08be760e7f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: 25
-  num_Clicks: 2
-  animacion: {fileID: 4707004477535312468}
 --- !u!114 &4707004477535312479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +143,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.005257487, y: -0.010514862}
   m_Size: {x: 0.4021906, y: 0.5388831}
   m_Direction: 0
+--- !u!114 &7904487774366784348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707004477535312469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6813044e202f8a7489a7e08be760e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 25
+  num_Clicks: 0
+  animacion: {fileID: 4707004477535312468}
