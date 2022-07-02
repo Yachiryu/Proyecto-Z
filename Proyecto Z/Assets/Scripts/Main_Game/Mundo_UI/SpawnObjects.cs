@@ -23,11 +23,12 @@ public class SpawnObjects : MonoBehaviour
     public Transform yspawn_Up;
     public Transform yspawn_Down;
 
+    
     void Start()
     {
-        //Metodo para hacer que el metodo funcione en el tiempo indicado y repetirlo
-        InvokeRepeating("Spawn", tiempodelRespawn, repeticiondelRespawn);
+        StartCoroutine("dificulty");
     }
+   
     // Dificultades
     private void Update()
     {
@@ -35,25 +36,33 @@ public class SpawnObjects : MonoBehaviour
 
         if (tiempodificultad > 20 && tiempodificultad < 30)
         {
-            repeticiondelRespawn = 0.02f;
+            repeticiondelRespawn = 2.75f;
         }
 
         if (tiempodificultad > 30 && tiempodificultad < 40)
         {
-            repeticiondelRespawn = 0.1f;
+            repeticiondelRespawn = 2f;
         }
 
         if (tiempodificultad > 40 && tiempodificultad < 50)
         {
-            repeticiondelRespawn = 0.3f;
+            repeticiondelRespawn = 1.75f;
         }
 
         if (tiempodificultad > 60)
         {
-            repeticiondelRespawn = 0.5f;
+            repeticiondelRespawn = 0.65f;
         }
 
     }
+
+    IEnumerator dificulty() 
+    {
+        yield return new WaitForSeconds(repeticiondelRespawn);
+        Spawn();
+        StartCoroutine("dificulty");
+    }
+
 
     public void Spawn()
     {
