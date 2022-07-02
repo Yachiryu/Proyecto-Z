@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Puntaje_Deteccion : MonoBehaviour
 {
@@ -8,17 +9,23 @@ public class Puntaje_Deteccion : MonoBehaviour
     // Y la vida que tendra al morir, y laanimacion a ejecutar
     public int Score = 0;
     public int num_Clicks;
+    private int vida_Aliado = 3;
     public Animator animacion;
 
     /* Hace que unity detecte donde esta dando "Click" el mouse y
        Dar la puntuacion correspondiente del enemigo */
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Game_Over");
+    }
     private void OnMouseDown()
     {
         if (tag == "Enemy")
         {
             num_Clicks --;
-            if (num_Clicks <= 0)
+            if (num_Clicks == 0)
             {
+                GetComponent<AudioSource>().enabled = true;
                 GetComponent<Movement>().enabled = false;
                 animacion.SetBool("Muerte_Anim",true);
                 Destroy(gameObject,2f);
@@ -29,8 +36,9 @@ public class Puntaje_Deteccion : MonoBehaviour
         if (tag == "Enemy2")
         {
             num_Clicks--;
-            if (num_Clicks <= 0)
+            if (num_Clicks == 0)
             {
+                GetComponent<AudioSource>().enabled = true;
                 GetComponent<Movement>().enabled = false;
                 animacion.SetBool("Muerte_Anim", true);
                 Destroy(gameObject,2f);
@@ -40,13 +48,22 @@ public class Puntaje_Deteccion : MonoBehaviour
 
         if (tag == "Ally")
         {
-            GetComponent<Movement>().enabled = false;
-            animacion.SetBool("Muerte_Anim", true);
-            Destroy(gameObject,2f);
-            Score_UI.score -= Score;
+            num_Clicks--;
+            if (num_Clicks == 0)
+            {
+                GetComponent<AudioSource>().enabled = true;
+                GetComponent<Movement>().enabled = false;
+                animacion.SetBool("Muerte_Anim", true);
+                Destroy(gameObject, 2f);
+                Score_UI.score -= Score;
+                vida_Aliado--;
+            }
         }
 
-
+        if (vida_Aliado <= 0)
+        {
+            GameOver();
+        }
     }
 
 

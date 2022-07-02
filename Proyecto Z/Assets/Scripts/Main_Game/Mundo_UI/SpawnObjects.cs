@@ -8,10 +8,12 @@ public class SpawnObjects : MonoBehaviour
     public GameObject[] objects;
     
     // Definimos desde cuando queremos que empiecen a respawnear los enemigos
-    public float tiempodelRespawn = 1;
+    public float tiempodelRespawn = 2;
     
     // Cuanto queremos repetir el spawn
     public float repeticiondelRespawn = 3;
+
+    public float tiempodificultad = 0;
      
 
     // Puntos en los cuales referenciamos los spawn point donde queremos a los enemigos
@@ -25,6 +27,32 @@ public class SpawnObjects : MonoBehaviour
     {
         //Metodo para hacer que el metodo funcione en el tiempo indicado y repetirlo
         InvokeRepeating("Spawn", tiempodelRespawn, repeticiondelRespawn);
+    }
+    // Dificultades
+    private void Update()
+    {
+        tiempodificultad += Time.deltaTime;
+
+        if (tiempodificultad > 20 && tiempodificultad < 30)
+        {
+            repeticiondelRespawn = 0.02f;
+        }
+
+        if (tiempodificultad > 30 && tiempodificultad < 40)
+        {
+            repeticiondelRespawn = 0.1f;
+        }
+
+        if (tiempodificultad > 40 && tiempodificultad < 50)
+        {
+            repeticiondelRespawn = 0.3f;
+        }
+
+        if (tiempodificultad > 60)
+        {
+            repeticiondelRespawn = 0.5f;
+        }
+
     }
 
     public void Spawn()

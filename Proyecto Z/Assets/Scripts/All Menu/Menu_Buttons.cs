@@ -8,6 +8,7 @@ public class Menu_Buttons : MonoBehaviour
     public void Jugar()
     {
         SceneManager.LoadScene("Juego_Principal");
+        Score_UI.score = 0;
     }
 
     public void Salir()
@@ -25,4 +26,10 @@ public class Menu_Buttons : MonoBehaviour
     {
         SceneManager.LoadScene("Menu_Inicio");
     }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Game_Over");
+        Score_UI.score = 0;
+    }
+
 }

@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Trigger_Vidas : MonoBehaviour
 {
     public GameObject[] Health;
     public int point_Heal;
-
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Game_Over");
+    }
     public void Update()
     {
         if (point_Heal < 1)
@@ -23,6 +27,11 @@ public class Trigger_Vidas : MonoBehaviour
         {
             Destroy(Health[2].gameObject);
         }
+        
+        if (point_Heal <= 0)
+        {
+            GameOver();
+        }
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,13 +39,16 @@ public class Trigger_Vidas : MonoBehaviour
         
         if (collision.tag == "Enemy") 
         {
+            GetComponent<AudioSource>().enabled = true;
             Destroy(collision.gameObject);
             Score_UI.score -= 50;
             point_Heal--;
+            GetComponent<AudioSource>().enabled = false;
         }
 
         if (collision.tag == "Enemy2")
         {
+            GetComponent<AudioSource>().enabled = true;
             Destroy(collision.gameObject);
             Score_UI.score -= 100;
             point_Heal--;
